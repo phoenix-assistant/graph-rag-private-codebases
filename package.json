@@ -1,0 +1,54 @@
+{
+  "name": "@phoenixaihub/graphrag",
+  "version": "0.1.0",
+  "description": "Graph RAG for private codebases — index code into a knowledge graph with semantic search and MCP server. Self-hosted, no code leaves your machine.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "graphrag": "./dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "lint": "tsc --noEmit",
+    "test": "node --test dist/**/*.test.js",
+    "prepublishOnly": "npm run build"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "rag",
+    "graph",
+    "codebase",
+    "knowledge-graph",
+    "mcp",
+    "tree-sitter",
+    "semantic-search",
+    "embeddings",
+    "code-intelligence"
+  ],
+  "author": "Phoenix AI Hub",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/phoenix-assistant/graph-rag-private-codebases.git"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.7.0",
+    "commander": "^13.1.0",
+    "glob": "^11.0.1",
+    "openai": "^4.78.0",
+    "@anthropic-ai/sdk": "^0.39.0",
+    "@modelcontextprotocol/sdk": "^1.12.1"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.12",
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.0"
+  }
+}

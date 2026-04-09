@@ -1,0 +1,5 @@
+node_modules/
+dist/
+.graphrag/
+*.db
+.DS_Store
